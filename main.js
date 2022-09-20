@@ -3,6 +3,7 @@
  var  ctx = canvas.getContext("2d");   
  var   color = "black";
  var   width_of_line = 2;
+ var events = "";
 
     var width = screen.width;
     var new_width = screen.width - 70;
@@ -78,7 +79,7 @@ function myMousemove(e)
  if (events == "mouseDown") 
  {
     color = document.getElementById("color").value; width_of_line = document.getElementById("width_of_line").value;
-      ctx.beginPath();        ;oç,
+      ctx.beginPath(); 
      ctx.strokeStyle = color;
      ctx.lineWidth = width_of_line;
      console.log("last postitions of X and Y: " + "X = "+ lastpos_x + "Y = "+ lastpos_y);
@@ -105,12 +106,6 @@ function myMouseup(e)
 {
     events = "mouseup";
 }
-
-    function cleararea() 
-    {
+ function cleararea(){
         ctx.clearRect(0, 0, canvas.width, canvas.height);  
     }
-    
-//Addictonal Activity start
-        
-        //Addictonal Activity ends
